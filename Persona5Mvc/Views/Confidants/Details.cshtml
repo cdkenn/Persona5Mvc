@@ -1,0 +1,99 @@
+﻿@model Persona5Mvc.Models.Confidant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Confidant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arcana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arcana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DaysAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaysAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfDayAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfDayAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+</div>
+
+<p>Rank Count: @Model.Ranks.Count</p>
+
+@foreach(var rank in Model.Ranks)
+{
+<p>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(modelRank => rank.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(modelRank => rank.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelRank => rank.PerkName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(modelRank => rank.PerkName) - @Html.DisplayFor(modelRank => rank.PerkDescription)
+        </dd>
+    </dl>
+</p>
+}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

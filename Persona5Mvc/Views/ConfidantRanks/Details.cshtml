@@ -1,0 +1,58 @@
+﻿@model Persona5Mvc.Models.ConfidantRank
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ConfidantRank</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerkName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerkName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerkDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerkDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PointsToLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PointsToLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

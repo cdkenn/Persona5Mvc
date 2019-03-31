@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace Persona5Mvc.Models
 {
@@ -16,10 +12,5 @@ namespace Persona5Mvc.Models
         {
             Options = new List<DialogueOption>();
         }
-    }
-
-    public class ConfidantRankDialogueDBContext : DbContext
-    {
-        public DbSet<ConfidantRankDialogue> ConfidantRankDialogues { get; set; }
     }
 }
