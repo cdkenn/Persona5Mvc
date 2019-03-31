@@ -194,10 +194,6 @@
     <Compile Include="Controllers\ConfidantsController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Persona5Mvc.Models.ConfidantDBContext.mdf" />
-    <Content Include="App_Data\Persona5Mvc.Models.ConfidantDBContext_log.ldf">
-      <DependentUpon>Persona5Mvc.Models.ConfidantDBContext.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -274,7 +270,9 @@
     <Content Include="Views\DialogueOptions\Edit.cshtml" />
     <Content Include="Views\DialogueOptions\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
