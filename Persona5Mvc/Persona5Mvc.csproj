@@ -181,6 +181,7 @@
       <DependentUpon>201903311726421_init-confidants.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeders\ConfidantSeeder.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Confidant.cs" />
     <Compile Include="Models\ConfidantRank.cs" />
