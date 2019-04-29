@@ -189,6 +189,7 @@
     <Compile Include="Models\DialogueOption.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Persona5DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\ConfidantsController.cs" />

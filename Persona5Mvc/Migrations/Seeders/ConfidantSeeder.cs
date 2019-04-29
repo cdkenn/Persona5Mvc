@@ -9,7 +9,7 @@ namespace Persona5Mvc.Migrations.Seeders
 {
     public class ConfidantSeeder
     {
-        public void Seed(ConfidantDBContext context)
+        public void Seed(Persona5DbContext context)
         {
             context.Confidants.AddOrUpdate(i => i.Arcana,
                 GenerateFoolConfidant(),
@@ -32,7 +32,7 @@ namespace Persona5Mvc.Migrations.Seeders
                 GenerateStarConfidant(),
                 GenerateMoonConfidant(),
                 GenerateSunConfidant(),
-                GenerateJusticeConfidant()
+                GenerateJudgementConfidant()
             );
         }
 

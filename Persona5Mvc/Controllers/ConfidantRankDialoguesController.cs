@@ -12,7 +12,7 @@ namespace Persona5Mvc.Controllers
 {
     public class ConfidantRankDialoguesController : Controller
     {
-        private ConfidantDBContext db = new ConfidantDBContext();
+        private Persona5DbContext db = new Persona5DbContext();
 
         // GET: ConfidantRankDialogues
         public ActionResult Index()

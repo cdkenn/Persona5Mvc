@@ -8,14 +8,15 @@ namespace Persona5Mvc.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Persona5Mvc.Models.ConfidantDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Persona5Mvc.Models.Persona5DbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            
         }
 
-        protected override void Seed(Persona5Mvc.Models.ConfidantDBContext context)
+        protected override void Seed(Persona5Mvc.Models.Persona5DbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

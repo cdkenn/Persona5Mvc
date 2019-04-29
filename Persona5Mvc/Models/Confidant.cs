@@ -29,12 +29,4 @@ namespace Persona5Mvc.Models
             Ranks = new List<ConfidantRank>();
         }
     }
-
-    public class ConfidantDBContext : DbContext
-    {
-        public DbSet<Confidant> Confidants { get; set; }
-        public DbSet<ConfidantRank> ConfidantRanks { get; set; }
-        public DbSet<ConfidantRankDialogue> ConfidantRankDialogues { get; set; }
-        public DbSet<DialogueOption> DialogueOptions { get; set; }
-    }
 }
