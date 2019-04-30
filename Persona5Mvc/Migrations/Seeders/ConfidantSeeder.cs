@@ -1,15 +1,16 @@
 ﻿using Persona5Mvc.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 
 namespace Persona5Mvc.Migrations.Seeders
 {
-    public class ConfidantSeeder
+    public class ConfidantSeeder : ISeeder
     {
-        public void Seed(Persona5DbContext context)
+        public void SeedData(Persona5DbContext context)
         {
             context.Confidants.AddOrUpdate(i => i.Arcana,
                 GenerateFoolConfidant(),

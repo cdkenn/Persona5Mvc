@@ -180,8 +180,14 @@
     <Compile Include="Migrations\201903311726421_init-confidants.Designer.cs">
       <DependentUpon>201903311726421_init-confidants.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904300303535_persona-model.cs" />
+    <Compile Include="Migrations\201904300303535_persona-model.Designer.cs">
+      <DependentUpon>201904300303535_persona-model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeders\ConfidantSeeder.cs" />
+    <Compile Include="Migrations\Seeders\ISeeder.cs" />
+    <Compile Include="Migrations\Seeders\PersonaSeeders.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Confidant.cs" />
     <Compile Include="Models\ConfidantRank.cs" />
@@ -189,6 +195,7 @@
     <Compile Include="Models\DialogueOption.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Persona5DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -292,6 +299,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903311726421_init-confidants.resx">
       <DependentUpon>201903311726421_init-confidants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904300303535_persona-model.resx">
+      <DependentUpon>201904300303535_persona-model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

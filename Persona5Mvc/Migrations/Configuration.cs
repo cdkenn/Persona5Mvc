@@ -12,7 +12,7 @@ namespace Persona5Mvc.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             
         }
 
@@ -23,7 +23,10 @@ namespace Persona5Mvc.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             ConfidantSeeder confSeeder = new ConfidantSeeder();
-            confSeeder.Seed(context);
+            confSeeder.SeedData(context);
+
+            PersonaSeeders personaSeeder = new PersonaSeeders();
+            personaSeeder.SeedData(context);
         }
     }
 }

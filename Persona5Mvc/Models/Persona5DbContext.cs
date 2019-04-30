@@ -12,6 +12,7 @@ namespace Persona5Mvc.Models
         public DbSet<ConfidantRank> ConfidantRanks { get; set; }
         public DbSet<ConfidantRankDialogue> ConfidantRankDialogues { get; set; }
         public DbSet<DialogueOption> DialogueOptions { get; set; }
+        public DbSet<Persona> Personas { get; set; }
 
         public Persona5DbContext()
         {
