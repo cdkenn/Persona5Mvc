@@ -151,6 +151,8 @@ namespace Persona5Mvc.Migrations.Seeders
                             {
                                 new ConfidantRankDialogue
                                 {
+                                    DialogueOrder = 1,
+                                    TextBeforeOptions = "",
                                     Options = new List<DialogueOption>
                                     {
                                         new DialogueOption
@@ -169,9 +171,102 @@ namespace Persona5Mvc.Migrations.Seeders
                                             PointsGiven = 2
                                         },
                                     }
+                                },
+                                new ConfidantRankDialogue
+                                {
+                                    DialogueOrder = 2,
+                                    TextBeforeOptions = "",
+                                    Options = new List<DialogueOption>
+                                    {
+                                        new DialogueOption
+                                        {
+                                            OptionText = "What about them?",
+                                            PointsGiven = 0
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "And then you punched him?",
+                                            PointsGiven = 0
+                                        }
+                                    }
+                                },
+                                new ConfidantRankDialogue
+                                {
+                                    DialogueOrder = 3,
+                                    TextBeforeOptions = "",
+                                    Options = new List<DialogueOption>
+                                    {
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Do you want to go back?",
+                                            PointsGiven = 2
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Do you regret it?",
+                                            PointsGiven = 2
+                                        }
+                                    }
                                 }
                             }
                         },
+                        new ConfidantRank
+                        {
+                            Level = 3,
+                            PointsToLevel = 0,
+                            PerkName = "Final Blow",
+                            PerkDescription = "A followup attack that can kill an enemy",
+                            Details = "",
+                            Dialogues = new List<ConfidantRankDialogue>
+                            {
+                                new ConfidantRankDialogue
+                                {
+                                    DialogueOrder = 1,
+                                    TextBeforeOptions = "",
+                                    Options = new List<DialogueOption>
+                                    {
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Lets not fight.",
+                                            PointsGiven = 2
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Want to train with us?",
+                                            PointsGiven = 0
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "It's nice to meet you.",
+                                            PointsGiven = 0
+                                        },
+                                    }
+                                },
+                                new ConfidantRankDialogue
+                                {
+                                    DialogueOrder = 2,
+                                    TextBeforeOptions = "",
+                                    Options = new List<DialogueOption>
+                                    {
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Calm down, Ryuji.",
+                                            PointsGiven = 3
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "Just endure it.",
+                                            PointsGiven = 2
+                                        },
+                                        new DialogueOption
+                                        {
+                                            OptionText = "I'll shut them up",
+                                            PointsGiven = 0
+                                        },
+                                    }
+                                }
+                            }
+                        }
                     }
             };
             return confidant;

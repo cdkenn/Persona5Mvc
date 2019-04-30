@@ -12,5 +12,7 @@ namespace Persona5Mvc.Models
         [Display(Name = "Points")]
         [DisplayFormat(DataFormatString = "{0:+#;-#;0}")]
         public int PointsGiven { get; set; }
+
+        public int ConfidantRankDialogueID { get; set; }
     }
 }

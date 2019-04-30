@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<Persona5Mvc.Models.Confidant>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "P5 Confidants";
 }
 
-<h2>Index</h2>
+<h2>Confidants</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -35,35 +32,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Arcana)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Details)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateAvailable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DaysAvailable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TimeOfDayAvailable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arcana)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaysAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeOfDayAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>

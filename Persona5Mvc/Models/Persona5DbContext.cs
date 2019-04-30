@@ -15,7 +15,6 @@ namespace Persona5Mvc.Models
 
         public Persona5DbContext()
         {
-            this.Configuration.LazyLoadingEnabled = false;
         }
     }
 }

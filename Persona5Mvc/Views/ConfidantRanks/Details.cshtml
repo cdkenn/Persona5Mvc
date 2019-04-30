@@ -1,14 +1,14 @@
 ﻿@model Persona5Mvc.Models.ConfidantRank
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Rank Details";
 }
 
-<h2>Details</h2>
-
+<h2>Rank Details</h2>
 <div>
-    <h4>ConfidantRank</h4>
+    <h4>Rank @Html.DisplayFor(model => model.Level)</h4>
     <hr />
+    <span>@Html.ActionLink("Back to arcana", "Details", "Confidants", new { id = Model.ConfidantID }, null)</span>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Level)
@@ -49,10 +49,17 @@
         <dd>
             @Html.DisplayFor(model => model.Details)
         </dd>
-
     </dl>
+
+    @foreach (var dialogue in Model.Dialogues.OrderBy(o => o.DialogueOrder))
+    {
+        <h4>Response @Html.DisplayFor(d => dialogue.DialogueOrder)</h4>
+        foreach (var dOption in dialogue.Options)
+        {
+            <dl class="dl-horizontal">
+                <dt>@Html.DisplayFor(dO => dOption.PointsGiven)</dt>
+                <dd>@Html.DisplayFor(dO => dOption.OptionText)</dd>
+            </dl>
+        }
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
