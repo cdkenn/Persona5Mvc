@@ -21,13 +21,14 @@ namespace Persona5Mvc.Controllers
         }
 
         // GET: Confidants/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string arcana)
         {
-            if (id == null)
+            if (string.IsNullOrEmpty(arcana))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Confidant confidant = db.Confidants.Find(id);
+            // search by the arcana (fool, chariot, etc)
+            Confidant confidant = db.Confidants.First(i => i.Arcana.ToLower() == arcana.ToLower());
             if (confidant == null)
             {
                 return HttpNotFound();

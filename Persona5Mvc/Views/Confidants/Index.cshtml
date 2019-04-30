@@ -57,7 +57,8 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                @*@Html.ActionLink("Details", "Confidant", new { arcana = item.Arcana })*@
+                @Html.ActionLink("More", "Details", "Confidants", new { arcana = item.Arcana}, null)
             </td>
         </tr>
     }
