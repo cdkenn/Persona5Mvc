@@ -1,0 +1,88 @@
+﻿@model Persona5Mvc.Models.Persona
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arcana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arcana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseStrength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseStrength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseMagic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseMagic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseEndurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseEndurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseAgility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseAgility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseLuck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseLuck)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

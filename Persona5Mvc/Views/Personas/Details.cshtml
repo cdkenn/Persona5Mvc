@@ -1,0 +1,82 @@
+﻿@model Persona5Mvc.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arcana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arcana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseStrength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseStrength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseMagic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseMagic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseEndurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseEndurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseAgility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseAgility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseLuck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseLuck)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

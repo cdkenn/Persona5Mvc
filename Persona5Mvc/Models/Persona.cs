@@ -14,14 +14,19 @@ namespace Persona5Mvc.Models
         public int Level { get; set; }
         public string Arcana { get; set; }
         [Range(1, 99)]
+        [Display(Name="Strength")]
         public int BaseStrength { get; set; }
         [Range(1, 99)]
+        [Display(Name = "Magic")]
         public int BaseMagic { get; set; }
         [Range(1, 99)]
+        [Display(Name = "Endurance")]
         public int BaseEndurance { get; set; }
         [Range(1, 99)]
+        [Display(Name = "Agility")]
         public int BaseAgility { get; set; }
         [Range(1, 99)]
+        [Display(Name = "Luck")]
         public int BaseLuck { get; set; }
     }
 }
