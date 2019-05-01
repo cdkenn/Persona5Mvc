@@ -84,7 +84,7 @@
             </dd>
 
             <dd>
-                @Html.ActionLink("Details", "Details", "ConfidantRanks", new { id = rank.ID }, null)
+                @Html.ActionLink("More", "Details", "ConfidantRanks", new { arcana = Model.Arcana, level = rank.Level}, null)
             </dd>
 
         </dl>

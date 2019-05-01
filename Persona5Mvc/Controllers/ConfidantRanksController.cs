@@ -21,13 +21,21 @@ namespace Persona5Mvc.Controllers
         }
 
         // GET: ConfidantRanks/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string arcana, int? level)
         {
-            if (id == null)
+            if (level == null || string.IsNullOrEmpty(arcana))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ConfidantRank confidantRank = db.ConfidantRanks.Find(id);
+
+            // first fetch the Confidant, then the rank from that
+            Confidant confidant = db.Confidants.First(c => c.Arcana.ToLower() == arcana.ToLower());
+            if (confidant == null)
+            {
+                return HttpNotFound();
+            }
+
+            ConfidantRank confidantRank = confidant.Ranks.First(cR => cR.Level == level);
             if (confidantRank == null)
             {
                 return HttpNotFound();

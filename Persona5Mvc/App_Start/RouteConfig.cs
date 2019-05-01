@@ -14,6 +14,12 @@ namespace Persona5Mvc
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "ConfidantRank",
+                url : "Confidants/{arcana}/{level}",
+                defaults : new { controller = "ConfidantRanks", action = "Details"}
+            );
+
+            routes.MapRoute(
                 name: "Confidant",
                 url: "Confidants/{arcana}",
                 defaults: new { controller = "Confidants", action = "Details" }
