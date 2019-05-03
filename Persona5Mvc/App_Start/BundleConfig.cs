@@ -8,6 +8,14 @@ namespace Persona5Mvc
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/p5c").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery.validate*",
+                "~/Scripts/modernizr-*",
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/p5c.js"
+                ));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
