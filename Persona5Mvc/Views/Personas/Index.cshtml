@@ -6,4 +6,16 @@
 
 <h2>Persona 5 Compendium</h2>
 
+<p>
+    @using (Html.BeginForm("Index", "Personas", FormMethod.Get))
+    {
+        <p>
+            Name: @Html.TextBox("personaName")
+            Arcane: @Html.DropDownList("personaArcana", "All")
+            <input type="submit" value="Fitler"/>
+        </p>
+    }
+</p>
+
+
 @Html.Partial("_IndexTable")

@@ -15,8 +15,32 @@ namespace Persona5Mvc.Controllers
         private Persona5DbContext db = new Persona5DbContext();
 
         // GET: Personas
-        public ActionResult Index()
+        public ActionResult Index(string personaName, string personaArcana)
         {
+            // Gets the list of all possible arcanas and puts in select
+            var arcanaList = new List<string>();
+            var arcanaQry = db.Personas.OrderBy(p => p.Arcana)
+                                        .Select(p => p.Arcana)
+                                        .Distinct();
+            arcanaList.AddRange(arcanaQry);
+            ViewBag.personaArcana = new SelectList(arcanaList);
+
+            // get all personas
+            var personas = from p in db.Personas select p;
+
+            // search by the arcana and name
+            if (!string.IsNullOrEmpty(personaName))
+            {
+                personas = personas.Where(p => p.Name.ToLower().Contains(personaName.ToLower()));
+            }
+            if (!string.IsNullOrEmpty(personaArcana))
+            {
+                personas = personas.Where(p => p.Arcana == personaArcana);
+            }
+
+            // order the results
+            personas = personas.OrderBy(p => p.Level)
+                                        .OrderBy(p => p.Arcana);
             return View(db.Personas.ToList());
         }
 
