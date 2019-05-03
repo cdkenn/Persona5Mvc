@@ -7,15 +7,31 @@
 <h2>Persona 5 Compendium</h2>
 
 <p>
-    @using (Html.BeginForm("Index", "Personas", FormMethod.Get))
+    @*@using (Html.BeginForm("Index", "Personas", FormMethod.Get))
+        {
+            <p>
+                Name: @Html.TextBox("personaName")
+                Arcane: @Html.DropDownList("personaArcana", "All")
+                <input type="submit" value="Fitler"/>
+            </p>
+        }*@
+
+    @using (Ajax.BeginForm(
+        new AjaxOptions
+        {
+            HttpMethod = "get",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "personasList"
+        }))
     {
-        <p>
-            Name: @Html.TextBox("personaName")
-            Arcane: @Html.DropDownList("personaArcana", "All")
-            <input type="submit" value="Fitler"/>
-        </p>
-    }
-</p>
+    <p>
+        Name: @Html.TextBox("personaName")
+        Arcane: @Html.DropDownList("personaArcana", "All")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+    </p>
 
 
-@Html.Partial("_IndexTable")
+    @Html.Partial("_IndexTable", Model)

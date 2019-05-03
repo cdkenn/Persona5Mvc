@@ -41,7 +41,14 @@ namespace Persona5Mvc.Controllers
             // order the results
             personas = personas.OrderBy(p => p.Level)
                                         .OrderBy(p => p.Arcana);
-            return View(db.Personas.ToList());
+
+            // check to see if it's ajax and just resend the table
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_IndexTable", personas);
+            }
+
+            return View(personas.ToList());
         }
 
         // GET: Personas/Details/5

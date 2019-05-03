@@ -11,6 +11,7 @@ namespace Persona5Mvc
             bundles.Add(new ScriptBundle("~/bundles/p5c").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery.validate*",
+                "~/Scripts/jquery.unobtrusive-ajax.js",
                 "~/Scripts/modernizr-*",
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/p5c.js"
